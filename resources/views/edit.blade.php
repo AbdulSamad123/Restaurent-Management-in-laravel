@@ -3,10 +3,11 @@
 @section('content')
 <div class="col-sm-6">
 <h1>Edit Restaurent</h1>
-<form method="post" action="">
+<form method="post" action="/edit">
   @csrf  
   <div class="mb-3">
     <label>Name</label>
+    <input type="hidden" name="id"value="{{$data->id}}">
     <input type="text" name="name" class="form-control" value="{{$data->name}}" placeholder="enter name">
   </div>
   <div class="mb-3">
