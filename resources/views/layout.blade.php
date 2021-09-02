@@ -34,14 +34,14 @@
         </li>
         @if(Session::get('user'))
         <li class="nav-item">
-          <a class="nav-link" href="#">welcome ,{{Session::get('user')}}</a>
+          <a class="nav-link" href="#">welcome | {{Session::get('user')}}</a>
         </li>
         @else
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Login</a>
+          <a class="nav-link" href="login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register" tabindex="-1" aria-disabled="true">Register</a>
+          <a class="nav-link" href="register">Register</a>
         </li>
         @endif
       </ul>

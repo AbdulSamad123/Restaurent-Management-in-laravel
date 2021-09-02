@@ -15,7 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('/','RestoController@index');
+Route::group(['middleware'=>"web"],function(){
+    Route::get('/','RestoController@index');
 Route::get('/list','RestoController@list');
 Route::view('/add','add');
 Route::post('/add','RestoController@add');
@@ -24,3 +25,6 @@ Route::get('/edit/{id}','RestoController@edit');
 Route::post('edit','RestoController@update');
 Route::view('register','register');
 Route::post('register','RestoController@register');
+Route::view('login','login');
+Route::post('login','RestoController@login');
+});
